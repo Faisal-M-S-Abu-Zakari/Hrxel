@@ -32,8 +32,7 @@ const BackToTop = () => {
           exit={{ y: -100, opacity: 0 }}
           transition={{ duration: 0.3, type: "spring", stiffness: 200 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-12 h-12 flex items-center justify-center !rounded-full bg-[#FFAE00] text-white shadow-lg 
-               hover:bg-[#FFAE00] transition-colors duration-300 z-50"
+          className="fixed bottom-8 right-8 w-12 h-12 flex items-center justify-center rounded-full bg-[#d9821b] text-white shadow-lg hover:bg-[#e8922e] transition-colors duration-300 z-50"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >

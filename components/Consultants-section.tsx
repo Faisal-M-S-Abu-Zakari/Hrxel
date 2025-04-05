@@ -32,12 +32,12 @@ export function ConsultantsSection() {
             <p className="max-w-[900px] text-muted-foreground text-lg md:text-xl leading-relaxed">
               {isEnglish
                 ? "Expert guidance from industry professionals with deep local knowledge."
-                : "إرشاد احترافي من خبراء يمتلكون فهماً عميقاً للسوق المحلي."}
+                : ".إرشاد احترافي من خبراء يمتلكون فهماً عميقاً للسوق المحلي"}
             </p>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 max-w-5xl w-full">
-            <Card className="overflow-hidden shadow-lg">
+            <Card className="overflow-hidden shadow-lg  p-0">
               <div className="relative h-60 w-full">
                 <Image
                   src={hamza}
@@ -48,11 +48,10 @@ export function ConsultantsSection() {
               </div>
               <CardHeader>
                 <CardTitle>{isEnglish ? "Dr. Hamza" : "د. حمزة"}</CardTitle>
-
                 <CardDescription>
                   {isEnglish
-                    ? "Human Capital Solutions Consultant"
-                    : "استشاري حلول رأس المال البشري"}
+                    ? "Your Human Capital Solutions Advisor"
+                    : " مستشارك في حلول رأس المال البشري"}
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -60,36 +59,34 @@ export function ConsultantsSection() {
                   {isEnglish ? (
                     <>
                       <li>
-                        PhD from the UK and Master's from the USA in Human
-                        Resources Management
+                        Holds a PhD from the UK and a Master's degree from the
+                        USA in Human Resources Management.
                       </li>
-
                       <li>
-                        Led recruitment and talent acquisition teams in major
-                        companies
+                        Led recruitment and selection teams at major companies.
                       </li>
-
                       <li>
-                        Developed effective policies and strategies to improve
-                        organizational efficiency
+                        Develop effective policies and strategies to improve
+                        organizational efficiency.
                       </li>
                     </>
                   ) : (
                     <>
                       <li>
-                        دكتوراه من المملكة المتحدة وماجستير من الولايات المتحدة
-                        في إدارة الموارد البشرية
+                        حاصل على الدكتوراه من بريطانيا، والماجستير من أمريكا في
+                        إدارة الموارد البشرية
                       </li>
-                      <li> قاد فرق التوظيف واكتساب المواهب في شركات كبرى</li> 
+                      <li>قاد فرق التوظيف والاستقطاب في كبرى الشركات</li>
                       <li>
-                        وضع سياسات واستراتيجيات فعالة لتحسين الكفاءة التنظيمية
+                        طور سياسات واستراتيجيات فعّالة لرفع كفاءة المنظمات
                       </li>
                     </>
                   )}
                 </ul>
               </CardContent>
             </Card>
-            <Card className="overflow-hidden shadow-lg">
+
+            <Card className="overflow-hidden shadow-lg  p-0">
               <div className="relative h-60 w-full">
                 <Image
                   src={omar}
@@ -105,8 +102,8 @@ export function ConsultantsSection() {
 
                 <CardDescription>
                   {isEnglish
-                    ? "Organizational Excellence Consultant"
-                    : "استشاري التميز المؤسسي"}
+                    ? " Your consultant for institutional excellence services"
+                    : " مستشارك في خدمات التميز المؤسسي"}
                 </CardDescription>
               </CardHeader>
               <CardContent>

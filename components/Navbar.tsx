@@ -18,7 +18,7 @@ export function Navbar() {
       dir={isEnglish ? "ltr" : "rtl"}
     >
       <div className="container flex h-16 items-center justify-between">
-        {/* Image on the left */}
+        {/* Logo */}
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
             <Image
@@ -31,39 +31,27 @@ export function Navbar() {
             />
           </Link>
         </div>
-
-        {/* Navigation in the middle */}
-        <nav className="flex-grow flex items-center justify-center gap-6">
-          <Link
-            href="#about"
-            className="text-sm font-medium text-[#283949] hover:text-[#F39921] transition"
-          >
-            {isEnglish ? "About" : "حول"}
-          </Link>
-
-          <Link
-            href="#consultants"
-            className="text-sm font-medium text-[#283949] hover:text-[#F39921] transition"
-          >
-            {isEnglish ? "Consultants" : "المستشارون"}
-          </Link>
-
-          <Link
-            href="#services"
-            className="text-sm font-medium text-[#283949] hover:text-[#F39921] transition"
-          >
-            {isEnglish ? "Services" : "الخدمات"}
-          </Link>
-
-          <Link
-            href="#contact"
-            className="text-sm font-medium text-[#283949] hover:text-[#F39921] transition"
-          >
-            {isEnglish ? "Contact" : "اتصل بنا"}
-          </Link>
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex flex-grow items-center justify-center gap-6">
+          {["about", "consultants", "services", "contact"].map((section) => (
+            <Link
+              key={section}
+              href={`#${section}`}
+              className="text-sm font-medium text-[#283949] hover:text-[#F39921] transition"
+            >
+              {isEnglish
+                ? section.charAt(0).toUpperCase() + section.slice(1)
+                : section === "about"
+                ? "حول"
+                : section === "consultants"
+                ? "المستشارون"
+                : section === "services"
+                ? "الخدمات"
+                : "اتصل بنا"}
+            </Link>
+          ))}
         </nav>
-
-        {/* Button on the right */}
+        {/* Right Side Buttons */}
         <div className="flex items-center gap-4">
           <Button
             variant="outline"
@@ -72,6 +60,7 @@ export function Navbar() {
           >
             {isEnglish ? "العربية" : "English"}
           </Button>
+          {/* Hamburger menu on mobile */}
           <div className="md:hidden">
             <Button
               variant="ghost"
@@ -89,42 +78,28 @@ export function Navbar() {
           </div>
         </div>
       </div>
-
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="container md:hidden py-4 border-t border-[#e5e7eb] bg-white">
+        <div className="md:hidden container py-4 border-t border-[#e5e7eb] bg-white">
           <nav className="flex flex-col space-y-4">
-            <Link
-              href="#about"
-              className="text-sm font-medium text-[#283949] hover:text-[#F39921] transition"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {isEnglish ? "About" : "حول"}
-            </Link>
-
-            <Link
-              href="#consultants"
-              className="text-sm font-medium text-[#283949] hover:text-[#F39921] transition"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {isEnglish ? "Consultants" : "المستشارون"}
-            </Link>
-
-            <Link
-              href="#services"
-              className="text-sm font-medium text-[#283949] hover:text-[#F39921] transition"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {isEnglish ? "Services" : "الخدمات"}
-            </Link>
-
-            <Link
-              href="#contact"
-              className="text-sm font-medium text-[#283949] hover:text-[#F39921] transition"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {isEnglish ? "Contact" : "اتصل بنا"}
-            </Link>
+            {["about", "consultants", "services", "contact"].map((section) => (
+              <Link
+                key={section}
+                href={`#${section}`}
+                className="text-sm font-medium text-[#283949] hover:text-[#F39921] transition"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {isEnglish
+                  ? section.charAt(0).toUpperCase() + section.slice(1)
+                  : section === "about"
+                  ? "حول"
+                  : section === "consultants"
+                  ? "المستشارون"
+                  : section === "services"
+                  ? "الخدمات"
+                  : "اتصل بنا"}
+              </Link>
+            ))}
 
             <Button className="bg-[#F39921] hover:bg-[#d9821b] w-full text-white rounded-xl">
               <span className="font-arabic">
@@ -132,14 +107,6 @@ export function Navbar() {
                   ? "We know best... start with us"
                   : "حنّا أدرى... ابدأ معنا"}
               </span>
-            </Button>
-
-            <Button
-              variant="outline"
-              onClick={toggleLanguage}
-              className="border-[#F39921] text-[#F39921] hover:bg-[#f3992111]"
-            >
-              {isEnglish ? "العربية" : "English"}
             </Button>
           </nav>
         </div>

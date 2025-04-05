@@ -35,7 +35,7 @@ export function HeroSection() {
             <p className="max-w-xl text-[#243545] text-base md:text-lg">
               {isEnglish
                 ? "A Saudi platform specializing in providing integrated solutions for individuals and companies in the fields of human capital, organizational excellence, and executive search, with local expertise and deep knowledge of the Saudi market."
-                : "منصة سعودية متخصصة في تقديم حلول متكاملة للأفراد والشركات في مجالات رأس المال البشري والتميّز المؤسسي واستقطاب التنفيذيين، بخبرة محلية ومعرفة عميقة بالسوق السعودي."}
+                : "منصة سعودية متخصصة في تقديم حلول متكاملة للأفراد والشركات في مجالات رأس المال البشري والتميّز المؤسسي والبحث التنفيذي، بخبرة محلية ومعرفة عميقة بالسوق السعودي."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-[#F39921] hover:bg-[#d9821b] transition px-4 py-2 rounded-xl text-white">

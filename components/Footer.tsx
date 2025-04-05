@@ -34,7 +34,7 @@ export function Footer() {
                 ? "A Saudi platform specializing in human capital solutions, organizational excellence, and executive search."
                 : "منصة سعودية متخصصة في حلول رأس المال البشري، والتميز المؤسسي، والبحث التنفيذي."}
             </p>
-            <p className="text-sm font-arabic text-[#F39921]">
+            <p className="text-lg font-arabic text-[#F39921]">
               {isEnglish
                 ? "We know best... start with us"
                 : "حنّا أدرى... ابدأ معنا"}

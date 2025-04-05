@@ -35,7 +35,7 @@ export function ServicesSection() {
           className="max-w-5xl mx-auto"
           dir={isEnglish ? "ltr" : "rtl"}
         >
-          <TabsList className="grid w-full grid-cols-3 mb-8">
+          <TabsList className="w-full grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-0 mb-20 sm:mb-8">
             <TabsTrigger value="individuals">
               {isEnglish ? "Individual Services" : "خدمات الأفراد"}
             </TabsTrigger>
@@ -52,8 +52,8 @@ export function ServicesSection() {
               title={isEnglish ? "Services for Individuals" : "خدمات الأفراد"}
               desc={
                 isEnglish
-                  ? "Designed to help job seekers or those looking to develop their career paths"
-                  : "مصممة لمساعدة الباحثين عن عمل أو من يسعون لتطوير مسارهم المهني"
+                  ? "Designed to help job seekers or those wishing to develop their career paths."
+                  : "مصممة لمساعدة الباحثين عن عمل أو الراغبين في تطوير مساراتهم المهنية"
               }
               items={individualServices}
               isEnglish={isEnglish}
@@ -65,8 +65,8 @@ export function ServicesSection() {
               title={isEnglish ? "Services for Companies" : "خدمات الشركات"}
               desc={
                 isEnglish
-                  ? "Aimed at supporting organizations in building an effective work environment"
-                  : "دعم المؤسسات في بناء بيئة عمل فعالة وتحقيق التميز المؤسسي"
+                  ? "It aims to support establishments in building an effective work environment and achieving institutional excellence."
+                  : "تهدف إلى دعم المنشآت في بناء بيئة عمل فعّالة وتحقيق التميز المؤسسي.  "
               }
               items={companyServices}
               isEnglish={isEnglish}
@@ -75,11 +75,11 @@ export function ServicesSection() {
 
           <TabsContent value="executive">
             <ServiceCard
-              title={isEnglish ? "Executive Search" : "توظيف القيادات"}
+              title={isEnglish ? "Executive Search" : "البحث التنفيذي "}
               desc={
                 isEnglish
-                  ? "Specialized for recruiting senior leadership (managers, executives)"
-                  : "متخصصة في توظيف القيادات العليا مثل المديرين والتنفيذيين"
+                  ? "Designed to attract senior leaders (directors, deputies, executives)"
+                  : "مخصصة لاستقطاب القيادات العليا (مدراء، نواب، تنفيذيين)"
               }
               items={executiveServices}
               isEnglish={isEnglish}

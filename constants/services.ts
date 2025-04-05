@@ -4,38 +4,41 @@ export const individualServices = [
   {
     title: "Resume & LinkedIn Optimization",
     titleAr: "تحسين السيرة الذاتية وحساب لينكدإن",
-    desc: "Helps job seekers present themselves professionally and attractively to employers",
-    descAr: "مساعدة الباحثين عن عمل على تقديم أنفسهم بشكل احترافي وجذاب لأصحاب العمل",
+    desc: "It helps the researcher present himself in a professional and attractive manner to employers.",
+    descAr: "يساعد الباحث على تقديم نفسه بشكل احترافي وجاذب لأصحاب العمل.",
   },
   {
     title: "Personal Development Plan (IDP)",
-    titleAr: "خطة تطوير شخصية (IDP)",
-    desc: "Guides individuals in building a clear plan for their career goals",
-    descAr: "إرشاد الأفراد لبناء خطة واضحة لأهدافهم المهنية",
+    titleAr: "خطة تطوير شخصي  (IDP)",
+    desc: "Guiding the person to build a clear plan for his career goals based on strengths and opportunities.",
+    descAr:
+      "توجيه الشخص لبناء خطة واضحة لأهدافه المهنية بناءً على نقاط القوة والفرص",
   },
   {
     title: "Interview Training",
     titleAr: "تدريب على المقابلات الشخصية",
-    desc: "Enhances job seekers' confidence and performance in interviews",
-    descAr: "تعزيز الثقة لدى الباحثين عن عمل واجتياز المقابلات بنجاح",
+    desc: "Enhance the researcher's confidence and enable him to successfully complete the interviews.",
+    descAr: " تعزيز ثقة الباحث وتمكينه من اجتياز المقابلات بنجاح.",
   },
   {
-    title: "Career Counseling",
-    titleAr: "الإرشاد المهني",
-    desc: "Specialized guidance in choosing the most suitable career path",
-    descAr: "توجيه متخصص لاختيار المسار المهني المناسب",
+    title: " Professional consultations",
+    titleAr: "استشارات مهنية ",
+    desc: "Specialized guidance in choosing the most appropriate career path and business decisions.",
+    descAr: "توجيه متخصص في اختيار المسار المهني الأنسب وقرارات العمل.",
   },
   {
-    title: "Active Job Search Subscription",
-    titleAr: "الاشتراك في البحث النشط عن وظيفة",
+    title: "Subscribe to the active search service",
+    titleAr: "الاشتراك بخدمة البحث النشط",
     desc: "We search and apply on behalf of the job seeker for 6 months",
-    descAr: "نقوم بالبحث والتقديم للوظائف نيابة عن الباحث عن عمل لمدة 6 أشهر",
+    descAr:
+      "نقوم بالبحث والتقديم نيابة عن الباحث في الوظائف المناسبة لمدة 6 أشهر.",
   },
   {
     title: "Training Courses for Individuals",
-    titleAr: "دورات تدريبية للأفراد",
-    desc: "Free and paid courses in HR, leadership, and professional skills",
-    descAr: "دورات مجانية ومدفوعة في المهارات المهنية والموارد البشرية والقيادة",
+    titleAr: "الدورات التدريبية للأفراد  ",
+    desc: "Free courses to educate job seekers, and paid courses in professional skills, human resources, and leadership.",
+    descAr:
+      "دورات مجانية لتثقيف الباحثين عن العمل، ودورات مدفوعة في المهارات المهنية، الموارد البشرية، والقيادة. ",
   },
 ];
 
@@ -43,52 +46,55 @@ export const companyServices = [
   {
     title: "Organizational Structure Design",
     titleAr: "تصميم الهيكل التنظيمي",
-    desc: "Arranging departments and positions to enhance efficiency",
-    descAr: "تنظيم الأقسام والمناصب لتحسين الكفاءة ومنع التداخل",
+    desc: "Arranging departments and functions to enhance efficiency and prevent overlap.",
+    descAr: "ترتيب الأقسام والوظائف بما يعزز الكفاءة ويمنع التداخل. ",
   },
   {
-    title: "Policies and Regulations Development",
-    titleAr: "تطوير السياسات واللوائح",
-    desc: "Clear systems to regulate the company-employee relationship",
-    descAr: "أنظمة واضحة تنظم العلاقة بين الشركة والموظفين",
+    title: "Building policies and regulations",
+    titleAr: "بناء السياسات واللوائح",
+    desc: "Establish clear and fair work systems that regulate the relationship between the company and employees.",
+    descAr: " وضع أنظمة عمل واضحة وعادلة تنظم العلاقة بين الشركة والموظفين.",
   },
   {
     title: "Organizational Performance Assessment",
     titleAr: "تقييم الأداء المؤسسي",
-    desc: "Analyze performance and identify improvement opportunities",
-    descAr: "تحليل الأداء وتحديد فرص التحسين",
+    desc: "Comprehensive analysis of the company's overall performance and identification of improvement gaps.",
+    descAr: "تحليل شامل للأداء العام للشركة وتحديد الفجوات التحسينية.",
   },
   {
     title: "Key Performance Indicators (KPIs)",
-    titleAr: "تطوير مؤشرات الأداء الرئيسية (KPIs)",
-    desc: "Set precise success metrics for departments and employees",
-    descAr: "تحديد مقاييس دقيقة لنجاح الأقسام والموظفين",
+    titleAr: "بناء مؤشرات الأداء (KPIs)",
+    desc: "Establish accurate metrics to measure the success of departments and employees.",
+    descAr: "وضع مقاييس دقيقة لقياس نجاح الإدارات والموظفين.",
   },
   {
-    title: "EFQM Excellence Model Implementation",
-    titleAr: "تطبيق نموذج التميز الأوروبي (EFQM)",
-    desc: "Build sustainable strategies based on European standards",
-    descAr: "بناء استراتيجيات مستدامة وفقًا للمعايير الأوروبية",
+    title: "Applying the EFQM Excellence Model",
+    titleAr: "تطبيق نموذج EFQM للتميّز",
+    desc: "Developing sustainable corporate strategies based on European standards of excellence.",
+    descAr:
+      "تطوير استراتيجيات مؤسسية مستدامة مبنية على معايير التميز الأوروبية.",
   },
   {
-    title: "Training for Companies",
-    titleAr: "برامج تدريبية للشركات",
-    desc: "Custom programs in leadership, HR, and continuous development",
-    descAr: "برامج مخصصة لتطوير الموظفين والمديرين في القيادة والموارد البشرية",
+    title: "Corporate training and development programs",
+    titleAr: "برامج التدريب والتطوير للشركات",
+    desc: "Design customized programs to develop employees and managers in leadership, human resources, and continuous improvement.",
+    descAr:
+      "تصميم برامج مخصصة لتطوير الموظفين والمدراء في القيادة، الموارد البشرية، والتحسين المستمر.",
   },
 ];
 
 export const executiveServices = [
   {
-    title: "Confidential Leadership Hiring",
-    titleAr: "توظيف القيادات بسرية تامة",
-    desc: "We match leaders with your strategic needs and culture",
-    descAr: "نقوم باختيار قادة يتماشون مع أهداف المنظمة وثقافتها بسرية تامة",
+    title:
+      "Recruiting highly qualified candidates with complete confidentiality",
+    titleAr: "استقطاب مرشحين ذوي كفاءة عالية وسرية تامة",
+    desc: "We select leaders who fit the organization's culture and strategic goals.",
+    descAr: "نختار قيادات تتناسب مع ثقافة المنشأة وأهدافها الاستراتيجية.",
   },
   {
-    title: "Leadership & Competency Assessment",
-    titleAr: "تقييم الكفاءات والقيادة",
-    desc: "Includes interviews and behavioral evaluations",
-    descAr: "يشمل مقابلات تحليلية وتقييمات سلوكية وتنظيمية",
+    title: "Comprehensive assessment of leadership competencies and skills",
+    titleAr: "تقييم شامل للكفاءات والمهارات القيادية",
+    desc: "Includes analytical interviews, behavioral and organizational assessment.",
+    descAr: "يشمل مقابلات تحليلية وتقييم سلوكي وتنظيمي.",
   },
 ];
