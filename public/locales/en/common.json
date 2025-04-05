@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "title": "HRXEL - Human Capital Solutions & Organizational Excellence",
+    "description": "HRXEL is a Saudi platform specializing in providing integrated solutions for individuals and companies in the fields of human capital, organizational excellence, and executive search."
+  },
+  "slogan": "We know our market best",
+  "hero": {
+    "title": "Your Partner for Human Capital Solutions & Organizational Excellence",
+    "description": "A Saudi platform specializing in providing integrated solutions for individuals and companies in the fields of human capital, organizational excellence, and executive search, with local expertise and deep knowledge of the Saudi market.",
+    "button": "We know best... start with us"
+  },
+  "nav": {
+    "about": "About",
+    "consultants": "Consultants",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "consultants": {
+    "title": "Meet Our Consultants",
+    "subtitle": "Expert guidance from industry professionals with deep local knowledge.",
+    "consultant1": {
+      "name": "Dr. Hamza",
+      "title": "Human Capital Solutions Consultant",
+      "bio": [
+        "PhD from the UK and Master's from the USA in Human Resources Management",
+        "Led recruitment and talent acquisition teams in major companies",
+        "Developed effective policies and strategies to improve organizational efficiency"
+      ]
+    },
+    "consultant2": {
+      "name": "Eng. Omar Al-Ghamdi",
+      "title": "Organizational Excellence Consultant",
+      "bio": [
+        "Expert in organizational compliance and development",
+        "Held leadership positions at BAE Systems and participated in international conferences",
+        "Received innovation awards and contributed to building performance strategies and improving work environments"
+      ]
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive solutions tailored to your needs",
+    "tabs": {
+      "individuals": "Individual Services",
+      "companies": "Corporate Services",
+      "executive": "Executive Search"
+    },
+    "individuals": {
+      "title": "Services for Individuals",
+      "description": "Designed to help job seekers or those looking to develop their career paths"
+    },
+    "companies": {
+      "title": "Services for Companies",
+      "description": "Aimed at supporting organizations in building an effective work environment"
+    },
+    "executive": {
+      "title": "Executive Search",
+      "description": "Specialized for recruiting senior leadership (managers, executives)"
+    }
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "subtitle": "Take the first step towards transforming your career or organization.",
+    "join": "Join Now",
+    "talk": "Talk to Us"
+  },
+  "footer": {
+    "description": "A Saudi platform specializing in human capital solutions, organizational excellence, and executive search.",
+    "sections": {
+      "services": "Services",
+      "individual": "Individual Services",
+      "corporate": "Corporate Services",
+      "executive": "Executive Search",
+      "company": "Company",
+      "about": "About Us",
+      "consultants": "Our Consultants",
+      "careers": "Careers",
+      "contact": "Contact",
+      "connect": "Connect With Us"
+    },
+    "rights": "All rights reserved."
+  }
+}
