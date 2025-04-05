@@ -18,6 +18,7 @@ export function Navbar() {
       dir={isEnglish ? "ltr" : "rtl"}
     >
       <div className="container flex h-16 items-center justify-between">
+        {/* Image on the left */}
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
             <Image
@@ -29,12 +30,10 @@ export function Navbar() {
               priority
             />
           </Link>
-
-          <span className="hidden md:inline-block text-sm font-arabic font-medium text-[#283949]">
-            {isEnglish ? "We know our market best" : "حنّا أدرى بسوقنا"}
-          </span>
         </div>
-        <nav className="hidden md:flex items-center gap-6">
+
+        {/* Navigation in the middle */}
+        <nav className="flex-grow flex items-center justify-center gap-6">
           <Link
             href="#about"
             className="text-sm font-medium text-[#283949] hover:text-[#F39921] transition"
@@ -62,7 +61,10 @@ export function Navbar() {
           >
             {isEnglish ? "Contact" : "اتصل بنا"}
           </Link>
+        </nav>
 
+        {/* Button on the right */}
+        <div className="flex items-center gap-4">
           <Button
             variant="outline"
             onClick={toggleLanguage}
@@ -70,25 +72,25 @@ export function Navbar() {
           >
             {isEnglish ? "العربية" : "English"}
           </Button>
-        </nav>
-
-        <div className="md:hidden">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle Menu"
-            className="text-[#1F3141]"
-          >
-            {isMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </Button>
+          <div className="md:hidden">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle Menu"
+              className="text-[#1F3141]"
+            >
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </Button>
+          </div>
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="container md:hidden py-4 border-t border-[#e5e7eb] bg-white">
           <nav className="flex flex-col space-y-4">

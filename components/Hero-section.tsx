@@ -10,7 +10,7 @@ export function HeroSection() {
   const { isEnglish } = useSwitch();
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-white via-[#fefaf4] to-[#f8f9fb]">
+    <section className="py-16 md:py-24 bg-gradient-to-br from-white via-[#fefaf4] to-[#f8f9fb] h=[calc(100vh-64px)]">
       <div className="container px-4 md:px-6 mx-auto flex items-center justify-center">
         <div
           className={`grid gap-28 lg:grid-cols-2 items-center ${

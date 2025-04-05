@@ -1,3 +1,4 @@
+import BackToTop from "@/components/BackToTop";
 import { ConsultantsSection } from "@/components/Consultants-section";
 import { CTASection } from "@/components/Cta-section";
 import { Footer } from "@/components/Footer";
@@ -16,6 +17,7 @@ export default function Home() {
         <CTASection />
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 }

@@ -11,7 +11,7 @@ export function Footer() {
 
   return (
     <footer
-      className="bg-gradient-to-br from-[#1f1f1f] via-[#2c2c2c] to-[#1a1a1a] text-white py-12"
+      className="bg-gradient-to-br from-[#1f1f1f] via-[#2c2c2c] to-[#1a1a1a] text-white py-12 "
       dir={isEnglish ? "ltr" : "rtl"}
     >
       <div className="container px-4 md:px-6">
@@ -34,8 +34,10 @@ export function Footer() {
                 ? "A Saudi platform specializing in human capital solutions, organizational excellence, and executive search."
                 : "منصة سعودية متخصصة في حلول رأس المال البشري، والتميز المؤسسي، والبحث التنفيذي."}
             </p>
-            <p className="text-sm font-arabic">
-              {isEnglish ? "We know our market best" : "حنّا أدرى بسوقنا"}
+            <p className="text-sm font-arabic text-[#F39921]">
+              {isEnglish
+                ? "We know best... start with us"
+                : "حنّا أدرى... ابدأ معنا"}
             </p>
           </div>
 
@@ -126,7 +128,7 @@ export function Footer() {
               </Link>
               <Link
                 href="#"
-                className="text-gray-400 hover:text-[#F39921] transition"
+                className="text-gray-400 hover:text-[#F39921] transition px-3"
               >
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
@@ -146,7 +148,6 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Footer Bottom */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-sm text-gray-400 text-center">
           <p>
             © {new Date().getFullYear()} HRXEL.{" "}
