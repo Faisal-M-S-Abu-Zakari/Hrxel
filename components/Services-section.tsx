@@ -11,12 +11,15 @@ import {
 
 export function ServicesSection() {
   const { isEnglish } = useSwitch();
-
+  const textStyle = isEnglish
+    ? { fontFamily: "var(--font-elegant)" }
+    : { fontFamily: "var(--font-arabic)" };
   return (
     <section
       id="services"
       className="py-12 md:py-20 bg-gradient-to-br from-white via-[#fefaf4] to-[#f8f9fb]"
       dir={isEnglish ? "ltr" : "rtl"}
+      style={textStyle}
     >
       <div className="container px-4 md:px-6">
         <div className="text-center mb-12 space-y-4">
@@ -35,7 +38,7 @@ export function ServicesSection() {
           className="max-w-5xl mx-auto"
           dir={isEnglish ? "ltr" : "rtl"}
         >
-          <TabsList className="w-full grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-0 mb-20 sm:mb-8">
+          <TabsList className="w-full flex flex-wrap justify-center gap-2 mb-8">
             <TabsTrigger value="individuals">
               {isEnglish ? "Individual Services" : "خدمات الأفراد"}
             </TabsTrigger>

@@ -8,11 +8,16 @@ import logo from "@/public/logo.jpg";
 
 export function Footer() {
   const { isEnglish } = useSwitch();
-
+  const textStyle = isEnglish
+    ? { fontFamily: "var(--font-elegant)" }
+    : { fontFamily: "var(--font-arabic)" };
   return (
     <footer
-      className="bg-gradient-to-br from-[#1f1f1f] via-[#2c2c2c] to-[#1a1a1a] text-white py-12 "
+      className={`bg-gradient-to-br from-[#1f1f1f] via-[#2c2c2c] to-[#1a1a1a] text-white py-12 ${
+        isEnglish ? "font-elegant" : "font-arabic rtl"
+      }`}
       dir={isEnglish ? "ltr" : "rtl"}
+      style={textStyle}
     >
       <div className="container px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -113,37 +118,57 @@ export function Footer() {
             </h3>
             <div className="flex space-x-4 rtl:space-x-reverse">
               <Link
-                href="#"
+                href="https://twitter.com/hrxel_company"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-[#F39921] transition"
-              >
-                <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-400 hover:text-[#F39921] transition"
+                aria-label="Twitter"
               >
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
               <Link
-                href="#"
+                href="https://instagram.com/hrxel.sa"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-[#F39921] transition px-3"
+                aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
               <Link
-                href="#"
+                href="https://www.linkedin.com/company/hrxel/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-[#F39921] transition"
+                aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
             </div>
             <div className="mt-4 text-sm text-gray-400">
-              <p>Email: info@hrxel.com</p>
-              <p>{isEnglish ? "Phone" : "الهاتف"}: +966 12 345 6789</p>
+              <p className="flex items-center gap-2">
+                <span className="font-medium">Email:</span>
+                <a
+                  href="mailto:info@hrxel.com"
+                  className="hover:text-[#F39921] transition"
+                >
+                  info@hrxel.com
+                </a>
+              </p>
+              <p className="flex items-center gap-2 mt-1">
+                <span className="font-medium">
+                  {isEnglish ? "Phone" : "الهاتف"}:
+                </span>
+                <a
+                  href="tel:+966594881412"
+                  className="hover:text-[#F39921] transition"
+                >
+                  0594881412
+                </a>
+              </p>
             </div>
           </div>
         </div>

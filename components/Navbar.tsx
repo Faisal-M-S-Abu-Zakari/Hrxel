@@ -11,11 +11,14 @@ import { useSwitch } from "@/context/switchContext";
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isEnglish, toggleLanguage } = useSwitch();
-
+  const textStyle = isEnglish
+    ? { fontFamily: "var(--font-elegant)" }
+    : { fontFamily: "var(--font-arabic)" };
   return (
     <header
       className="sticky top-0 z-50 w-full border-b bg-white text-[#1F3141] backdrop-blur shadow-sm px-3"
       dir={isEnglish ? "ltr" : "rtl"}
+      style={textStyle}
     >
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}

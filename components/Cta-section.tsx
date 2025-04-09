@@ -6,12 +6,15 @@ import Link from "next/link";
 
 export function CTASection() {
   const { isEnglish } = useSwitch();
-
+  const textStyle = isEnglish
+    ? { fontFamily: "var(--font-elegant)" }
+    : { fontFamily: "var(--font-arabic)" };
   return (
     <section
       id="contact"
-      className="py-16 md:py-24 bg-gray-50 text-gray-800"
+      className={`py-16 md:py-24 bg-gray-50 text-gray-800  `}
       dir={isEnglish ? "ltr" : "rtl"}
+      style={textStyle}
     >
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-6 text-center">

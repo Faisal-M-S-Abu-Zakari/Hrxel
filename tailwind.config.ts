@@ -62,8 +62,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)"],
-        arabic: ["var(--font-tajawal)"],
+        elegant: ["var(--font-elegant)"],
+        arabic: ["var(--font-arabic)"],
       },
       borderRadius: {
         lg: "var(--radius)",

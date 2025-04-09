@@ -1,17 +1,21 @@
 import "./globals.css";
-import { Inter, Tajawal } from "next/font/google";
+import { Montserrat } from "next/font/google";
+import { Tajawal } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SwitchWrapper } from "@/context/switchContext";
 
-const inter = Inter({
+// Google font for English text
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500", "700"],
+  variable: "--font-elegant",
 });
 
+// Google font for Arabic text
 const tajawal = Tajawal({
   subsets: ["arabic"],
   weight: ["400", "500", "700"],
-  variable: "--font-tajawal",
+  variable: "--font-arabic",
 });
 
 export const metadata = {
@@ -27,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${tajawal.variable} font-sans`}>
+      <body className={`${montserrat.variable} ${tajawal.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <SwitchWrapper>{children}</SwitchWrapper>
         </ThemeProvider>
