@@ -107,7 +107,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-[#F39921] transition">
+                <Link href="#about" className="hover:text-[#F39921] transition">
                   {isEnglish ? "Contact" : "تواصل معنا"}
                 </Link>
               </li>
