@@ -1,4 +1,19 @@
-// constants/services.ts
+import {
+  FileText,
+  BookUser,
+  Mic,
+  UserCheck,
+  SearchCheck,
+  GraduationCap,
+  Building2,
+  FileCog,
+  BarChart4,
+  GaugeCircle,
+  Landmark,
+  Users2,
+  ShieldCheck,
+  UserCog,
+} from "lucide-react";
 
 export const individualServices = [
   {
@@ -6,6 +21,7 @@ export const individualServices = [
     titleAr: "تحسين السيرة الذاتية وحساب لينكدإن",
     desc: "It helps the researcher present himself in a professional and attractive manner to employers.",
     descAr: "يساعد الباحث على تقديم نفسه بشكل احترافي وجاذب لأصحاب العمل.",
+    icon: FileText,
   },
   {
     title: "Personal Development Plan (IDP)",
@@ -13,18 +29,21 @@ export const individualServices = [
     desc: "Guiding the person to build a clear plan for his career goals based on strengths and opportunities.",
     descAr:
       "توجيه الشخص لبناء خطة واضحة لأهدافه المهنية بناءً على نقاط القوة والفرص",
+    icon: BookUser,
   },
   {
     title: "Interview Training",
     titleAr: "تدريب على المقابلات الشخصية",
     desc: "Enhance the researcher's confidence and enable him to successfully complete the interviews.",
     descAr: " تعزيز ثقة الباحث وتمكينه من اجتياز المقابلات بنجاح.",
+    icon: Mic,
   },
   {
-    title: " Professional consultations",
+    title: "Professional consultations",
     titleAr: "استشارات مهنية ",
     desc: "Specialized guidance in choosing the most appropriate career path and business decisions.",
     descAr: "توجيه متخصص في اختيار المسار المهني الأنسب وقرارات العمل.",
+    icon: UserCheck,
   },
   {
     title: "Subscribe to the active search service",
@@ -32,6 +51,7 @@ export const individualServices = [
     desc: "We search and apply on behalf of the job seeker for 6 months",
     descAr:
       "نقوم بالبحث والتقديم نيابة عن الباحث في الوظائف المناسبة لمدة 6 أشهر.",
+    icon: SearchCheck,
   },
   {
     title: "Training Courses for Individuals",
@@ -39,6 +59,7 @@ export const individualServices = [
     desc: "Free courses to educate job seekers, and paid courses in professional skills, human resources, and leadership.",
     descAr:
       "دورات مجانية لتثقيف الباحثين عن العمل، ودورات مدفوعة في المهارات المهنية، الموارد البشرية، والقيادة. ",
+    icon: GraduationCap,
   },
 ];
 
@@ -48,24 +69,28 @@ export const companyServices = [
     titleAr: "تصميم الهيكل التنظيمي",
     desc: "Arranging departments and functions to enhance efficiency and prevent overlap.",
     descAr: "ترتيب الأقسام والوظائف بما يعزز الكفاءة ويمنع التداخل. ",
+    icon: Building2,
   },
   {
     title: "Building policies and regulations",
     titleAr: "بناء السياسات واللوائح",
     desc: "Establish clear and fair work systems that regulate the relationship between the company and employees.",
     descAr: " وضع أنظمة عمل واضحة وعادلة تنظم العلاقة بين الشركة والموظفين.",
+    icon: FileCog,
   },
   {
     title: "Organizational Performance Assessment",
     titleAr: "تقييم الأداء المؤسسي",
     desc: "Comprehensive analysis of the company's overall performance and identification of improvement gaps.",
     descAr: "تحليل شامل للأداء العام للشركة وتحديد الفجوات التحسينية.",
+    icon: BarChart4,
   },
   {
     title: "Key Performance Indicators (KPIs)",
     titleAr: "بناء مؤشرات الأداء (KPIs)",
     desc: "Establish accurate metrics to measure the success of departments and employees.",
     descAr: "وضع مقاييس دقيقة لقياس نجاح الإدارات والموظفين.",
+    icon: GaugeCircle,
   },
   {
     title: "Applying the EFQM Excellence Model",
@@ -73,6 +98,7 @@ export const companyServices = [
     desc: "Developing sustainable corporate strategies based on European standards of excellence.",
     descAr:
       "تطوير استراتيجيات مؤسسية مستدامة مبنية على معايير التميز الأوروبية.",
+    icon: Landmark,
   },
   {
     title: "Corporate training and development programs",
@@ -80,6 +106,7 @@ export const companyServices = [
     desc: "Design customized programs to develop employees and managers in leadership, human resources, and continuous improvement.",
     descAr:
       "تصميم برامج مخصصة لتطوير الموظفين والمدراء في القيادة، الموارد البشرية، والتحسين المستمر.",
+    icon: Users2,
   },
 ];
 
@@ -90,11 +117,13 @@ export const executiveServices = [
     titleAr: "استقطاب مرشحين ذوي كفاءة عالية وسرية تامة",
     desc: "We select leaders who fit the organization's culture and strategic goals.",
     descAr: "نختار قيادات تتناسب مع ثقافة المنشأة وأهدافها الاستراتيجية.",
+    icon: ShieldCheck,
   },
   {
     title: "Comprehensive assessment of leadership competencies and skills",
     titleAr: "تقييم شامل للكفاءات والمهارات القيادية",
     desc: "Includes analytical interviews, behavioral and organizational assessment.",
     descAr: "يشمل مقابلات تحليلية وتقييم سلوكي وتنظيمي.",
+    icon: UserCog,
   },
 ];

@@ -31,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${montserrat.variable} ${tajawal.variable}`}>
+      <body className={`${montserrat.variable} ${tajawal.variable} `}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <SwitchWrapper>{children}</SwitchWrapper>
         </ThemeProvider>

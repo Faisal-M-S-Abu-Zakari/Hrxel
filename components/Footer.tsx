@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Instagram, Linkedin, Twitter } from "lucide-react";
 import { useSwitch } from "@/context/switchContext";
-import logo from "@/public/logo.jpg";
+import logo from "@/public/newLogo.jpg";
 
 export function Footer() {
   const { isEnglish } = useSwitch();
@@ -13,7 +13,7 @@ export function Footer() {
     : { fontFamily: "var(--font-arabic)" };
   return (
     <footer
-      className={`bg-gradient-to-br from-[#1f1f1f] via-[#2c2c2c] to-[#1a1a1a] text-white py-12 ${
+      className={`bg-[#283949] text-white py-12 ${
         isEnglish ? "font-elegant" : "font-arabic rtl"
       }`}
       dir={isEnglish ? "ltr" : "rtl"}
@@ -23,14 +23,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo & Description */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="relative w-20 h-20">
+            <Link href="/" className="flex items-center gap-3">
+              <div className="relative w-20 h-20 rounded-full overflow-hidden shadow-lg ring-2 ring-[#F39921]">
                 <Image
                   src={logo}
                   alt="HRXEL Logo"
-                  width={80}
-                  height={80}
-                  className="object-cover w-full h-full rounded-full border-4 border-primary shadow-lg"
+                  fill
+                  className="object-cover"
+                  priority
                 />
               </div>
             </Link>
@@ -54,7 +54,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <Link
-                  href="#services"
+                  href="#individualServices"
                   className="hover:text-[#F39921] transition"
                 >
                   {isEnglish ? "Individual Services" : "خدمات الأفراد"}
@@ -62,15 +62,15 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="#services"
+                  href="#companyServices"
                   className="hover:text-[#F39921] transition"
                 >
-                  {isEnglish ? "Corporate Services" : "خدمات الشركات"}
+                  {isEnglish ? "Company Services" : "خدمات الشركات"}
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#services"
+                  href="#executiveServices"
                   className="hover:text-[#F39921] transition"
                 >
                   {isEnglish ? "Executive Search" : "البحث التنفيذي"}
@@ -99,8 +99,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-[#F39921] transition">
-                  {isEnglish ? "Careers" : "الوظائف"}
+                <Link
+                  href="#services"
+                  className="hover:text-[#F39921] transition"
+                >
+                  {isEnglish ? "Our Services" : "خدماتنا"}
                 </Link>
               </li>
               <li>

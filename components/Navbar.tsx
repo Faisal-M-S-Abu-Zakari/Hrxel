@@ -5,72 +5,74 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/public/logo-mark-without-pg.png";
+import logo from "@/public/newLogo.jpg"; // Make sure this matches the Hero logo
 import { useSwitch } from "@/context/switchContext";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isEnglish, toggleLanguage } = useSwitch();
+
   const textStyle = isEnglish
     ? { fontFamily: "var(--font-elegant)" }
     : { fontFamily: "var(--font-arabic)" };
+
+  const navItems = [
+    { id: "about", en: "About", ar: "حول" },
+    { id: "consultants", en: "Consultants", ar: "المستشارون" },
+    { id: "services", en: "Services", ar: "الخدمات" },
+    { id: "contact", en: "Contact", ar: "اتصل بنا" },
+  ];
+
   return (
     <header
-      className="sticky top-0 z-50 w-full border-b bg-white text-[#1F3141] backdrop-blur shadow-sm px-3"
+      className="sticky top-0 z-50 w-full bg-[#283949] shadow-md px-3 text-white"
       dir={isEnglish ? "ltr" : "rtl"}
       style={textStyle}
     >
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center gap-2">
-            <Image
-              src={logo}
-              alt="Logo"
-              width={60}
-              height={60}
-              className="h-auto w-auto"
-              priority
-            />
-          </Link>
-        </div>
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src={logo}
+            alt="Logo"
+            width={50}
+            height={50}
+            className="h-auto w-auto rounded-md"
+            priority
+          />
+        </Link>
+
         {/* Desktop Navigation */}
         <nav className="hidden md:flex flex-grow items-center justify-center gap-6">
-          {["about", "consultants", "services", "contact"].map((section) => (
+          {navItems.map(({ id, en, ar }) => (
             <Link
-              key={section}
-              href={`#${section}`}
-              className="text-sm font-medium text-[#283949] hover:text-[#F39921] transition"
+              key={id}
+              href={`#${id}`}
+              className="text-sm font-medium hover:text-[#F39921] transition"
             >
-              {isEnglish
-                ? section.charAt(0).toUpperCase() + section.slice(1)
-                : section === "about"
-                ? "حول"
-                : section === "consultants"
-                ? "المستشارون"
-                : section === "services"
-                ? "الخدمات"
-                : "اتصل بنا"}
+              {isEnglish ? en : ar}
             </Link>
           ))}
         </nav>
+
         {/* Right Side Buttons */}
         <div className="flex items-center gap-4">
           <Button
             variant="outline"
             onClick={toggleLanguage}
-            className="border-[#F39921] text-[#F39921] hover:bg-[#f3992111]"
+            className="border-white text-white  text-sm font-medium hover:text-[#F39921] transition"
           >
             {isEnglish ? "العربية" : "English"}
           </Button>
-          {/* Hamburger menu on mobile */}
+
+          {/* Mobile menu toggle */}
           <div className="md:hidden">
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle Menu"
-              className="text-[#1F3141]"
+              className="text-white"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -81,26 +83,19 @@ export function Navbar() {
           </div>
         </div>
       </div>
+
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden container py-4 border-t border-[#e5e7eb] bg-white">
+        <div className="md:hidden container py-4 border-t border-[#ffffff22] bg-[#283949]">
           <nav className="flex flex-col space-y-4">
-            {["about", "consultants", "services", "contact"].map((section) => (
+            {navItems.map(({ id, en, ar }) => (
               <Link
-                key={section}
-                href={`#${section}`}
-                className="text-sm font-medium text-[#283949] hover:text-[#F39921] transition"
+                key={id}
+                href={`#${id}`}
+                className="text-sm font-medium hover:text-[#F39921] transition"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {isEnglish
-                  ? section.charAt(0).toUpperCase() + section.slice(1)
-                  : section === "about"
-                  ? "حول"
-                  : section === "consultants"
-                  ? "المستشارون"
-                  : section === "services"
-                  ? "الخدمات"
-                  : "اتصل بنا"}
+                {isEnglish ? en : ar}
               </Link>
             ))}
 
