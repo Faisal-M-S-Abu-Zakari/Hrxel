@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import omar from "@/public/omar.jpeg";
-import hamza from "@/public/hamza.jpeg";
+import omar from "@/public/omar.jpg";
+import hamza from "@/public/hamza.jpg";
 import { useSwitch } from "@/context/switchContext";
 import { CheckCircle } from "lucide-react";
 
@@ -49,7 +49,7 @@ export function ConsultantsSection() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent" />
 
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                   <h2 className="text-2xl font-bold mb-1" style={textStyle}>
@@ -104,7 +104,7 @@ export function ConsultantsSection() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent" />
 
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                   <h2 className="text-2xl font-bold mb-1" style={textStyle}>
