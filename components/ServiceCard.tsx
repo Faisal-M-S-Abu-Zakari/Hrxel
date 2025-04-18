@@ -1,62 +1,56 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
+import { Card, CardHeader } from "./ui/card";
 import { useSwitch } from "@/context/switchContext";
+import { cn } from "@/lib/utils";
 
-const ServiceCard = ({
-  title,
-  desc,
-  items,
-  icon: Icon,
-}: {
+interface ServiceItem {
   title: string;
-  desc: string;
+  titleAr: string;
   icon?: React.ElementType;
-  items: {
-    title: string;
-    titleAr: string;
-    desc: string;
-    descAr: string;
-    icon?: React.ElementType;
-  }[];
-}) => {
+}
+
+interface ServiceCardProps {
+  title: string;
+  icon?: React.ElementType;
+  items: ServiceItem[];
+}
+
+const ServiceCard = ({ title, icon: Icon, items }: ServiceCardProps) => {
   const { isEnglish } = useSwitch();
-  const textStyle = isEnglish
-    ? { fontFamily: "var(--font-elegant)" }
-    : { fontFamily: "var(--font-arabic)" };
+
+  const textStyle = {
+    fontFamily: isEnglish ? "var(--font-elegant)" : "var(--font-arabic)",
+  };
+
   return (
-    <Card
-      className={`bg-transparent border border-gray-700 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300  `}
-      style={textStyle}
+    <section
+      className="mb-10"
       dir={isEnglish ? "ltr" : "rtl"}
+      style={textStyle}
     >
-      <CardHeader className="p-6">
-        <CardTitle className="text-2xl font-bold text-white flex items-center gap-3">
-          {Icon && <Icon className="w-6 h-6 text-white" />}
-          {title}
-        </CardTitle>
-        <CardDescription className="text-gray-400 text-lg mt-2">
-          {desc}
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="p-6 grid sm:grid-cols-2 gap-6">
-        {items.map((item, i) => (
-          <div key={i} className="flex flex-col gap-2">
-            <h4 className="flex items-center font-semibold gap-3 text-white text-lg">
-              {item.icon && <item.icon className="w-5 h-5 text-white" />}
-              {isEnglish ? item.title : item.titleAr}
-            </h4>
-            <p className="text-sm text-gray-300">
-              {isEnglish ? item.desc : item.descAr}
-            </p>
-          </div>
+      <header className="mb-10 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-white flex justify-center items-center gap-3">
+          {Icon && <Icon className="w-7 h-7 text-white" />} {title}
+        </h2>
+      </header>
+
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+        {items.map((item, index) => (
+          <Card
+            key={index}
+            className="bg-[#2b3b4b]/80 backdrop-blur-sm border border-gray-600 rounded-3xl shadow-lg hover:shadow-2xl hover:scale-[1.035] transition-all duration-300 ease-in-out"
+          >
+            <CardHeader className="p-6 flex items-center gap-4 text-white text-lg font-semibold">
+              {item.icon && (
+                <item.icon className="w-6 h-6 text-[#F39921] shrink-0" />
+              )}
+              <span className="flex-1 leading-snug">
+                {isEnglish ? item.title : item.titleAr}
+              </span>
+            </CardHeader>
+          </Card>
         ))}
-      </CardContent>
-    </Card>
+      </div>
+    </section>
   );
 };
 

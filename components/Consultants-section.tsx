@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import omar from "@/public/omar.jpg";
 import hamza from "@/public/hamza.jpg";
+import omar2 from "@/public/omar2.jpeg";
 import { useSwitch } from "@/context/switchContext";
 import { CheckCircle } from "lucide-react";
 
@@ -16,7 +17,7 @@ export function ConsultantsSection() {
   return (
     <section
       id="consultants"
-      className={`py-12 md:py-20 bg-gradient-to-br from-[#1a2836] via-[#283949] to-[#354a5d] ${
+      className={`py-12 md:py-20 bg-gradient-to-br from-[#2c3e50] via-[#3a5067] to-[#4b6584] ${
         isEnglish ? "text-left" : "text-right"
       } ${isEnglish ? "ltr" : "rtl"}`}
       style={textStyle}
@@ -35,7 +36,7 @@ export function ConsultantsSection() {
             </p>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 max-w-5xl w-full">
+          <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full max-w-7xl mx-auto px-2 sm:px-0">
             {/* Dr. Hamza Card */}
             <Card
               className="overflow-hidden rounded-xl shadow-xl border-0 group p-0 bg-[#dadada]"
@@ -120,7 +121,7 @@ export function ConsultantsSection() {
               </div>
 
               <CardContent className="p-6 " style={textStyle}>
-                <ul className={`${isEnglish ? "space-y-14" : "space-y-10"}`}>
+                <ul className={`${isEnglish ? "space-y-14" : "space-y-16"}`}>
                   {(isEnglish
                     ? [
                         "Expert in organizational compliance and development",
@@ -133,6 +134,60 @@ export function ConsultantsSection() {
                         "حاصل على الماجستير في ادارة الاعمال",
                         "شغل مناصب قيادية في شركة BAE Systems وشارك في مؤتمرات دولية",
                         "حصل على جوائز الابتكار وساهم في بناء استراتيجيات الأداء وتحسين بيئات العمل",
+                      ]
+                  ).map((text, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-emerald-500 mt-1 flex-shrink-0" />
+                      <span className="text-sm leading-relaxed text-black-900">
+                        {text}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+            {/* Eng. Omar 2 Card */}
+            <Card
+              className="overflow-hidden rounded-xl shadow-xl border-0 group p-0 bg-[#dadada] "
+              dir={isEnglish ? "ltr" : "rtl"}
+            >
+              <div className="relative h-96 w-full overflow-hidden bg-gray-100">
+                <Image
+                  src={omar2}
+                  alt="A. Omar Al-Marghlani"
+                  fill
+                  className="object-cover  "
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
+
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                  <h2 className="text-2xl font-bold mb-1" style={textStyle}>
+                    {isEnglish ? "A. Omar Al-Marghlani" : "أ. عمر المرغلاني"}
+                  </h2>
+                  <p className="text-white/80 mb-4" style={textStyle}>
+                    {isEnglish
+                      ? "Your Legal Advisory & Corporate Compliance"
+                      : " مستشارك في الاستشارات القانونية والامتثال المؤسسي "}
+                  </p>
+                </div>
+              </div>
+
+              <CardContent className="p-6 " style={textStyle}>
+                <ul className="space-y-2">
+                  {(isEnglish
+                    ? [
+                        "He holds a Master of Laws (LL.M.) from the University of Pennsylvania, USA, with a focus on commercial law, arbitration, and intellectual property.",
+                        "A licensed attorney with practical experience in pleading and representing companies before judicial authorities in various labor and commercial cases.",
+                        "Provided advanced legal advice in the areas of corporate compliance, company formation, and drafting commercial contracts to local and private entities.",
+                        "He is characterized by a professional and analytical style, combining legal rigor and regulatory knowledge, making him a valuable addition to the HRXEL Governance team.",
+                      ]
+                    : [
+                        " حاصل على ماجستير في القانون (LL.M) من جامعة بنسلفانيا – الولايات المتحدة، مع تركيز على القانون التجاري، التحكيم، والملكية الفكرية.",
+                        "محامٍ مرخص يتمتع بخبرة عملية في الترافع وتمثيل الشركات أمام الجهات القضائية في قضايا عمالية وتجارية متنوعة.",
+                        " قدّم استشارات قانونية متقدمة في مجالات الامتثال المؤسسي، تأسيس الشركات، وصياغة العقود التجارية لجهات محلية وخاصة.",
+                        "يتميز بأسلوب احترافي وتحليلي، ويجمع بين الدقة القانونية والمعرفة التنظيمية، مما يجعله إضافة نوعية لفريق الحوكمة في HRXEL.",
                       ]
                   ).map((text, i) => (
                     <li key={i} className="flex items-start gap-3">

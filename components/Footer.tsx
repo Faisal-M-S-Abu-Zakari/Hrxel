@@ -4,10 +4,38 @@ import Link from "next/link";
 import Image from "next/image";
 import { Instagram, Linkedin, Twitter } from "lucide-react";
 import { useSwitch } from "@/context/switchContext";
-import logo from "@/public/newLogo.jpg";
-
+import logo from "@/public/logo-mark.jpg";
+import { content, socialLinks } from "@/constants/services";
+const serviceItems = [
+  {
+    id: "human-capital",
+    en: "Human Capital Service",
+    ar: "خدمات رأس المال البشري",
+  },
+  {
+    id: "organizational-excellence",
+    en: "Organizational Excellence Service",
+    ar: "خدمات التميز المؤسسي",
+  },
+  {
+    id: "supply-chain",
+    en: "Supply Chain Service",
+    ar: "خدمات سلاسل الإمداد",
+  },
+  {
+    id: "legal-advisory",
+    en: "Legal Advisory Corporate Compliance",
+    ar: "الاستشارات القانونية والامتثال المؤسسي",
+  },
+  {
+    id: "individual-career",
+    en: "Individual Career Development Service",
+    ar: "خدمات الأفراد وتطوير المسار المهني",
+  },
+];
 export function Footer() {
   const { isEnglish } = useSwitch();
+  const lang = isEnglish ? content.en : content.ar;
   const textStyle = isEnglish
     ? { fontFamily: "var(--font-elegant)" }
     : { fontFamily: "var(--font-arabic)" };
@@ -52,30 +80,16 @@ export function Footer() {
               {isEnglish ? "Services" : "الخدمات"}
             </h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>
-                <Link
-                  href="#individualServices"
-                  className="hover:text-[#F39921] transition"
-                >
-                  {isEnglish ? "Individual Services" : "خدمات الأفراد"}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#companyServices"
-                  className="hover:text-[#F39921] transition"
-                >
-                  {isEnglish ? "Company Services" : "خدمات الشركات"}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#executiveServices"
-                  className="hover:text-[#F39921] transition"
-                >
-                  {isEnglish ? "Executive Search" : "البحث التنفيذي"}
-                </Link>
-              </li>
+              {serviceItems.map((item) => (
+                <li key={item.id}>
+                  <Link
+                    href={`#${item.id}`}
+                    className="hover:text-[#F39921] transition"
+                  >
+                    {isEnglish ? item.en : item.ar}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -168,6 +182,44 @@ export function Footer() {
                 <span className="font-medium">
                   {isEnglish ? "Phone" : "الهاتف"}:
                 </span>
+                <a
+                  href="tel:+966594881412"
+                  className="hover:text-[#F39921] transition"
+                >
+                  0594881412
+                </a>
+              </p>
+            </div>
+          </div>
+          {/* Social & Contact */}
+          <div>
+            <div className="flex space-x-4 rtl:space-x-reverse">
+              {socialLinks.map(({ href, icon: Icon, label }) => (
+                <Link
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-[#F39921] transition px-3"
+                  aria-label={label}
+                >
+                  <Icon className="h-5 w-5" />
+                  <span className="sr-only">{label}</span>
+                </Link>
+              ))}
+            </div>
+            <div className="mt-4 text-sm text-gray-400 space-y-1">
+              <p className="flex items-center gap-2">
+                <span className="font-medium">{lang.emailLabel}</span>
+                <a
+                  href="mailto:info@hrxel.com"
+                  className="hover:text-[#F39921] transition"
+                >
+                  info@hrxel.com
+                </a>
+              </p>
+              <p className="flex items-center gap-2">
+                <span className="font-medium">{lang.phoneLabel}:</span>
                 <a
                   href="tel:+966594881412"
                   className="hover:text-[#F39921] transition"

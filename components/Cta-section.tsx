@@ -12,7 +12,7 @@ export function CTASection() {
   return (
     <section
       id="contact"
-      className={`py-16 md:py-24 bg-gray-50 text-gray-800 bg-gradient-to-br from-[#1a2836] via-[#283949] to-[#354a5d]  `}
+      className="py-16 md:py-24 bg-gradient-to-br from-[#2c3e50] via-[#3a5067] to-[#4b6584] text-gray-800"
       dir={isEnglish ? "ltr" : "rtl"}
       style={textStyle}
     >

@@ -1,9 +1,11 @@
 "use client";
 
 import { useSwitch } from "@/context/switchContext";
-import IndividualServices from "./IndividualServices";
-import CorporateServices from "./CorporateServices";
-import ExecutiveSearch from "./ExecutiveSearch";
+import HumanCapitalService from "./HumanCapitalService";
+import SupplyChainService from "./SupplyChainService";
+import OrganizationalExcellenceService from "./OrganizationalExcellenceService";
+import IndividualCareerDevelopmentService from "./IndividualCareerDevelopmentService";
+import LegalAdvisoryCorporateCompliance from "./LegalAdvisoryCorporateCompliance";
 
 export function ServicesSection() {
   const { isEnglish } = useSwitch();
@@ -14,10 +16,10 @@ export function ServicesSection() {
 
   return (
     <section
+      className="py-20 md:py-28 bg-[#1a2836] "
       id="services"
       dir={isEnglish ? "ltr" : "rtl"}
       style={textStyle}
-      className="py-20 md:py-28 bg-gradient-to-br from-[#1a2836] via-[#283949] to-[#354a5d]"
     >
       <div className="container mx-auto px-5 md:px-10">
         <div className="mb-16 text-center space-y-6">
@@ -33,9 +35,11 @@ export function ServicesSection() {
         </div>
 
         <div className="space-y-12">
-          <IndividualServices />
-          <CorporateServices />
-          <ExecutiveSearch />
+          <HumanCapitalService />
+          <OrganizationalExcellenceService />
+          <SupplyChainService />
+          <LegalAdvisoryCorporateCompliance />
+          <IndividualCareerDevelopmentService />
         </div>
       </div>
     </section>
