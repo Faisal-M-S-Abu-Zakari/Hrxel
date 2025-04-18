@@ -1,6 +1,5 @@
 import { Card, CardHeader } from "./ui/card";
 import { useSwitch } from "@/context/switchContext";
-import { cn } from "@/lib/utils";
 
 interface ServiceItem {
   title: string;
