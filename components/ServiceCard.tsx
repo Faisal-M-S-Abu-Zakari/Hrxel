@@ -8,12 +8,10 @@ interface ServiceItem {
 }
 
 interface ServiceCardProps {
-  title: string;
-  icon?: React.ElementType;
   items: ServiceItem[];
 }
 
-const ServiceCard = ({ title, icon: Icon, items }: ServiceCardProps) => {
+const ServiceCard = ({ items }: ServiceCardProps) => {
   const { isEnglish } = useSwitch();
 
   const textStyle = {
@@ -26,12 +24,6 @@ const ServiceCard = ({ title, icon: Icon, items }: ServiceCardProps) => {
       dir={isEnglish ? "ltr" : "rtl"}
       style={textStyle}
     >
-      <header className="mb-10 text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold text-white flex justify-center items-center gap-3">
-          {Icon && <Icon className="w-7 h-7 text-white" />} {title}
-        </h2>
-      </header>
-
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
         {items.map((item, index) => (
           <Card

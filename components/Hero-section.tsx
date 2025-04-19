@@ -49,9 +49,9 @@ export function HeroSection() {
             transition={{ duration: 1 }}
           >
             <div className="space-y-6">
-              <div className="flex flex-wrap items-center text-xl md:text-3xl text-gray-200 font-light">
+              <div className="flex flex-col items-start text-xl md:text-3xl text-gray-200 font-light animate-fade-in">
                 <p>{lang.introText}</p>
-                <span className="ml-2 text-[#F39921] font-bold whitespace-nowrap">
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent font-bold whitespace-nowrap pr-4">
                   <Typewriter
                     words={lang.typewriterWords}
                     loop
@@ -63,6 +63,7 @@ export function HeroSection() {
                   />
                 </span>
               </div>
+
               <p className="text-base md:text-lg font-semibold text-[#F39921]">
                 {lang.slogan}
               </p>
