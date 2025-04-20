@@ -19,8 +19,8 @@ export function Navbar() {
     : { fontFamily: "var(--font-arabic)" };
 
   const navItems = [
-    { id: "about", en: "About", ar: "حول" },
     { id: "stats", en: "Statistics", ar: "احصائيات" },
+    { id: "about", en: "About", ar: "حول" },
     { id: "consultants", en: "Consultants", ar: "المستشارون" },
     { id: "contact", en: "Contact", ar: "اتصل بنا" },
   ];

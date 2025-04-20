@@ -68,11 +68,9 @@ export function HeroSection() {
                 {lang.slogan}
               </p>
             </div>
-
             <p className="max-w-2xl text-gray-300 text-base md:text-lg lg:text-xl leading-relaxed">
               {lang.description}
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link href="/">
                 <Button className="bg-[#F39921] hover:bg-[#e08c23] transition-all duration-300 px-6 py-4 text-lg rounded-xl text-white shadow-md hover:shadow-lg hover:-translate-y-1">
@@ -80,8 +78,7 @@ export function HeroSection() {
                 </Button>
               </Link>
             </div>
-
-            {/* Social & Contact */}
+            z{/* Social & Contact */}
             <div>
               <div className="flex space-x-4 rtl:space-x-reverse">
                 {socialLinks.map(({ href, icon: Icon, label }) => (

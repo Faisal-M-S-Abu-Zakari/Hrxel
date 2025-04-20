@@ -6,6 +6,7 @@ import { HeroSection } from "@/components/Hero-section";
 import { Navbar } from "@/components/Navbar";
 import { ServicesSection } from "./../components/Services-section";
 import { StatisticsSection } from "@/components/StatisticsSection";
+import AboutSection from "@/components/AboutSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <StatisticsSection />
+        <AboutSection />
         <ConsultantsSection />
         <ServicesSection />
         <CTASection />

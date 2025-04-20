@@ -34,6 +34,10 @@ import {
   Twitter,
 } from "lucide-react";
 
+import team from "@/public/teamSpirit.svg";
+import hire from "@/public/hire.svg";
+import aggrement from "@/public/aggrement.svg";
+import step from "@/public/steps.svg";
 export const HumanCapitalServices = [
   {
     title: "Comprehensive Recruitment",
@@ -527,5 +531,75 @@ export const socialLinks = [
     href: "https://www.linkedin.com/company/hrxel/",
     icon: Linkedin,
     label: "LinkedIn",
+  },
+];
+
+export const sections = [
+  {
+    titleEn: "Local Expertise, Professional Solutions",
+    titleAr: "🧠 خبرة محلية، حلول احترافية",
+    src: team,
+    textEn: [
+      "We are a Saudi consulting company that combines local market understanding with professional solutions in HR, organizational excellence, legal governance, supply chain, and people development.",
+      "We don’t test the market… we are from the market.",
+      "Our consultants are Saudis with real experience within major government and private entities. This is why we know what the market needs, when it needs it, and how to deliver it in the best possible way.",
+    ],
+    textAr: [
+      "نحن شركة استشارية سعودية تجمع بين فهم السوق المحلي وحلول احترافية في: الموارد البشرية، التميز المؤسسي، الحوكمة القانونية، سلاسل الإمداد، وتطوير الأفراد.",
+      "نحن لا نختبر السوق... نحن من السوق.",
+      " مستشارونا سعوديون بخبرة حقيقية داخل أكبر الجهات الحكومية والخاصة، ولهذا نعرف وش يحتاج السوق، ومتى يحتاج، وكيف نوصله بأفضل الطرق.",
+    ],
+  },
+  {
+    titleEn: "We Know Our Market Best",
+    titleAr: "🌍 حنا أدرى بسوقنا",
+    src: hire,
+    textEn: [
+      "Our services are tailored to the reality of Saudi entities, in a language executives understand and employees accept.",
+      "We don’t recycle foreign solutions—we innovate from local challenges.",
+      "More than 99% of our team are young Saudis who have lived the challenge and understand the market.",
+    ],
+    textAr: [
+      "خدماتنا مبنية على واقع الجهات السعودية، بلغة يفهمها المدراء التنفيذيون، ويتقبلها الموظفون، وتواكب متطلبات الجهات التنظيمية.",
+      "لا نعيد تدوير حلول أجنبية، بل نبتكرها من قلب التحدي المحلي.",
+      "وما يزيدنا فخر؟ إن أكثر من 99٪ من فريقنا هم من الشباب السعودي، اللي عاش التحدي، وفاهم السوق، ويشتغل من داخله.",
+    ],
+  },
+  {
+    titleEn: "Comprehensive Solutions from A to Z",
+    titleAr: "🧩 حلول شاملة من الألف إلى الياء",
+    src: aggrement,
+    textEn: [
+      "Whether you’re running a major government entity or launching a startup, we offer everything you need under one roof.",
+      "From legal setup and recruitment to governance and organizational excellence.",
+      "We cover all aspects... with local understanding and professional execution.",
+    ],
+    textAr: [
+      "سواء كنت تقود جهة حكومية كبرى، تبني شركتك الناشئة، أو حتى تفكر تطلق مشروعك القادم... نقدم لك كل اللي تحتاجه تحت سقف واحد.",
+      "من تأسيس الكيان القانوني، إلى التوظيف وبناء الهيكل، مرورًا بالحَوكمة والتميز المؤسسي، وحتى تطوير الأفراد داخل منظمتك.",
+      "نغطي كل الجوانب... بفهم محلي، وتنفيذ احترافي.",
+    ],
+  },
+  {
+    titleEn: "Design Your Own Package",
+    titleAr: "🛠️ صمّم باقتك بنفسك",
+    src: step,
+    textEn: [
+      "📂 Step 1: Browse the sections. Choose the services that suit you from each main unit.",
+      "🤝 Step 2: Initial Meeting. We listen to your challenges and help you determine your real needs.",
+      "🧩 Step 3: Choose Your Services. We create a customized package that supports your goals.",
+      "📦 Step 4: Receive Proposal. You get a technical and financial proposal tailored for your organization.",
+      "🚀 Step 5: Start Together. We define the team, timeline, and success indicators and begin the journey with you.",
+    ],
+    textAr: [
+      // "كيف نشتغل؟ سهل ومرن… ومبني على احتياجك الحقيقي",
+      // " نعرف إن كل منظمة لها تحدياتها الخاصة، وعشان كذا ما نجيك بحلول جاهزة…",
+      // " ما عندنا باقات جاهزة مفروضة عليك، أنت من يصمم الحل.",
+      "📂 الخطوة 1: استعرض الأقسام واختر الخدمات التي تناسبك من كل وحدة رئيسية.",
+      "🤝 الخطوة 2: اجتماع أولي نسمع فيه لتحدياتك ونحدد وش تحتاج فعليًا.",
+      "🧩 الخطوة 3: اختر خدماتك وصمم باقة تدعم أهدافك وتحل مشاكلك.",
+      "📦 الخطوة 4: نرسل لك العرض الفني والمالي المصمم خصيصًا لك.",
+      "🚀 الخطوة 5: نبدأ سويًا ونحدد الفريق، الجدول، ومؤشرات النجاح.",
+    ],
   },
 ];
