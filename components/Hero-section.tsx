@@ -49,7 +49,7 @@ export function HeroSection() {
             transition={{ duration: 1 }}
           >
             <div className="space-y-6">
-              <div className="flex flex-col items-start text-lg md:text-3xl text-gray-200 font-light animate-fade-in">
+              <div className="flex flex-col items-start text-2xl md:text-3xl text-gray-200 font-light animate-fade-in">
                 <p>{lang.introText}</p>
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent font-bold whitespace-nowrap pr-4">
                   <Typewriter
